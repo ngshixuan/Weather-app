@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <title>WeatherApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/cloudy-color.png">
+</head>
+<body>
+    <div class="title">
+        <img src="img/cloudy.png" alt="" srcset="">
+        <h1 class="text-2xl pb-10">Weather Dashboard</h1>
+    </div>
+    
+    <div class="bg-card grid grid-cols-7">
+        <div class="col-span-2 weather">
+            <!-- form to enter city name -->
+            <form class="change-location my-4 text-center text-gray-400">
+                <input id="city" name="city" type="text" class="border search w-full" placeholder="Search for places...">
+            </form>
+    
+            <!-- Card design of the weather information -->
+            <div class="max-w-sm rounded overflow-hidden hidden card pb-10">
+                <img src="" class="time" alt="">
+    
+                <div class="icon mx-auto text-center">
+                    <img src="img/icons/1.svg" alt="">
+                </div>
+    
+                <div class="uppercase details">
+                    <div class="flex">
+                        <div class="text-6xl my-4">
+                            <span>21</span>
+                        </div>
+                        <div class="degree">
+                            <span>&deg; C</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5 class="my-3">City Name</h5>
+                    <div class="my-3">Weather Condition</div>
+                </div>
+            </div>
+
+            <div class="max-w-sm rounded overflow-hidden card cities">
+                <span class="text-2xl my-4 inline-block">Top Cities</span>
+                <div class="topCities cursor-pointer"></div>
+            </div>
+            
+        </div>
+        <div class="col-span-5 forecast">
+            <div class="forecast-info hidden">
+                <span class="text-2xl mt-4 inline-block">Daily Forecast</span>
+                <div class="grid grid-cols-7 gap-3 py-12 small-cards text-center"></div>
+                <span class="text-2xl mt-4 inline-block">Hourly Forecast</span>
+                <div class="highlights"></div>
+                <canvas id="line-chart" class="pr-10" width="800" height="450"></canvas>
+                <div class="grid grid-cols-12 gap-2 hourImg"></div>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="footer flex justify-center">
+        <span>Copyright &copy; 2024; Powered by Accuweather</span>
+        <img src="img/accuweather.png" alt="">
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/forecast.js"></script>
+    <script src="script/app.js"></script>
+    
+</body>
+</html>

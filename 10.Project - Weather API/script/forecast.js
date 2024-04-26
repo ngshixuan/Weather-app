@@ -14,7 +14,7 @@ This API KEY is when we make any HTTP request to their service, we can send this
 Free trial - we can only open 1 account and have 15 request.day
 */
 
-const key= "ASh9uBlysgkLUpbWvprLxLIAaXWd43jA";
+const key= "ilYeDU8NjXmsvevZAGHkUUvavHoh5Ilu";
 
 /*
 when we are requesting data from the ENDPOINTS in this API, we need to do 2 different things (for our project):

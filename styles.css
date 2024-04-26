@@ -1,0 +1,114 @@
+body{
+    background: #d6d7da;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.title{
+    margin: 1% 5% 0 5% !important;
+}
+
+h1{
+    padding-left: 55px;
+}
+
+.scroll{
+    overflow: auto;
+    height: 300px;
+}
+
+.title img{
+    width: 40px;
+    position: relative;
+    top: 30px;
+}
+
+.bg-card{
+    background-color: white;
+    margin: 0 5% 5% 5%;
+    border-radius: 40px;
+}
+
+input{
+    background-image: url(img/icons/magnifying-glass-solid.svg);
+    background-position: 10px 9px; 
+    background-repeat: no-repeat;
+}
+
+.icon img{
+    width: 200px;
+}
+
+.search{
+    border-radius: 20px;
+    padding: 8px 8px 8px 40px;
+}
+
+.search-icon{
+    font-size: 20px;
+    position: relative;
+    top: 30px;
+    right: 170px;
+}
+
+.degree{
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.forecast{
+    padding: 40px 0 40px 50px;
+    background: #f6f6f8;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.weather{
+    padding: 40px
+}
+
+.card-sm{
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.vl{
+    border-right: 1px solid black;
+    height: 5px;
+    padding: 0 5px;
+}
+
+.hourImg{
+    padding-left: 35px;
+    padding-right: 30px;
+}
+
+.dateTime{
+    font-size: 15px;
+}
+
+.cityWeather{
+    background-color: #FAF9F6;
+    border: 1px solid #E5E4E2;
+    border-radius: 20px;
+}
+
+.cityWeather img{
+    width: 50px;
+    position: relative;
+    bottom: 50px;
+}
+
+.footer{
+    margin-bottom: 5%;
+}
+
+.footer img{
+    width: 20px;
+}
+
+.footer span{
+    padding-right: 5px;
+}

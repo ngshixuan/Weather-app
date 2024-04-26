@@ -65,17 +65,6 @@ const getWeather = async(id) => {
     return data[0];
 }
 
-// getCity("manchester")
-//     .then((data) => {
-//         return getWeather(data.Key);
-//     })
-//     .then((data) => {
-//         console.log(data);
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     });
-
 const getForecasts = async(id) => {
     const base = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${id}`;
 
@@ -100,21 +89,5 @@ const hourlyForecast = async(id) => {
 
     return data;
 }
-
-// hourlyForecast('329260')
-//     .then((data) => {
-//         console.log(data);
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     });
-
-// getForecasts('329260')
-//     .then((data) => {
-//         console.log(data);
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     });
         
     

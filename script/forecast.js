@@ -28,6 +28,14 @@ when we are requesting data from the ENDPOINTS in this API, we need to do 2 diff
     (ii) "Conditions API" --> "current conditions"
 */
 
+const url = `https://dataservice.accuweather.com/locations/v1/topcities/50?apikey=${key}`;
+const proxyUrl = 'https://cors.anywhere.herokuapp.com';
+
+fetch(proxyUrl + url)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+
 const getCity = async(city) => {
 
     const base = "http://dataservice.accuweather.com/locations/v1/cities/search";
@@ -65,6 +73,17 @@ const getWeather = async(id) => {
     return data[0];
 }
 
+// getCity("manchester")
+//     .then((data) => {
+//         return getWeather(data.Key);
+//     })
+//     .then((data) => {
+//         console.log(data);
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     });
+
 const getForecasts = async(id) => {
     const base = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${id}`;
 
@@ -90,4 +109,3 @@ const hourlyForecast = async(id) => {
     return data;
 }
         
-    
